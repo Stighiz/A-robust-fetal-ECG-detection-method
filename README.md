@@ -1,0 +1,4 @@
+This project presents a robust method for detecting the fetal electrocardiogram (FECG) from non-invasive abdominal recordings, inspired by the work of Suzanna M. M. Martens, Chiara Rabotti, Massimo Mischi, and Rob J. Sluijtery.
+
+The methodology employs a sequential analysis pipeline to isolate the faint fetal heart signal. The process begins with pre-processing filters to remove baseline wander and power line interference. Next, Principal Component Analysis (PCA) is used to enhance the maternal QRS complexes, which are then detected using a Pan-Tompkins algorithm. An average maternal heartbeat template is created and subtracted from the signal to cancel out the maternal ECG interference.
+Finally, PCA is applied again to the residual signal to enhance the fetal QRS complexes. The fetal heart rate (FHR) is then determined by applying the Pan-Tompkins algorithm to this cleaned signal.
